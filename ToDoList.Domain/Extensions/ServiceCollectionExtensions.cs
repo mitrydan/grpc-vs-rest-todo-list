@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ToDoList.Domain.Extensions
 {
@@ -6,7 +7,7 @@ namespace ToDoList.Domain.Extensions
     {
         public static void AddDomain(this IServiceCollection serviceCollection)
         {
-
+            serviceCollection.AddMediatR(typeof(ServiceCollectionExtensions));
         }
     }
 }

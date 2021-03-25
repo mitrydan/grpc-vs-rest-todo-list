@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  todolist.web.rest:
+    image: ${DOCKER_REGISTRY-}todolist.web.rest
+    build:
+      context: .
+      dockerfile: ToDoList.Web.Rest/Dockerfile
+
+  todolist.web.grpc:
+    image: ${DOCKER_REGISTRY-}todolist.web.grpc
+    build:
+      context: .
+      dockerfile: ToDoList.Web.Grpc/Dockerfile
+
