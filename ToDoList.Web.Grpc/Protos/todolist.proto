@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "ToDoList.Web.Grpc";
+
+package todo;
+
+service ToDo {
+  rpc Get (GetTodosRequest) returns (GetTodosResponse);
+  rpc Create (CreateTodoRequest) returns (CreateTodoResponse);
+  rpc MarkCompleted (MarkCompletedRequest) returns (MarkCompletedResponse);
+}
+
+message GetTodosRequest {
+
+}
+
+message GetTodosResponse {
+  string todos = 1;
+}
+
+message CreateTodoRequest {
+  string actionTitle = 1;
+  string actionDescription = 2;
+}
+
+message CreateTodoResponse {
+  int64 id = 1;
+}
+
+message MarkCompletedRequest {
+  int64 id = 1;
+}
+
+message MarkCompletedResponse {
+  bool success = 1;
+}

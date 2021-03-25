@@ -13,3 +13,5 @@ services:
       context: .
       dockerfile: ToDoList.Web.Grpc/Dockerfile
 
+  todolist.web.grpcui:
+    image: "wongnai/grpcui"
