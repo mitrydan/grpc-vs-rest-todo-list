@@ -7,8 +7,6 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["ToDoList.Web.Rest/ToDoList.Web.Rest.csproj", "ToDoList.Web.Rest/"]
-COPY ["ToDoList.DataAccess/ToDoList.DataAccess.csproj", "ToDoList.DataAccess/"]
-COPY ["ToDoList.Domain/ToDoList.Domain.csproj", "ToDoList.Domain/"]
 RUN dotnet restore "ToDoList.Web.Rest/ToDoList.Web.Rest.csproj"
 COPY . .
 WORKDIR "/src/ToDoList.Web.Rest"
