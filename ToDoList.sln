@@ -7,13 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Web.Grpc", "ToDoLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Web.Rest", "ToDoList.Web.Rest\ToDoList.Web.Rest.csproj", "{13BC9207-C859-4C4E-B89B-2839113E8B05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Domain", "ToDoList.Domain\ToDoList.Domain.csproj", "{7911A766-D1F8-4AFD-BEB8-F887F8030D89}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.DataAccess", "ToDoList.DataAccess\ToDoList.DataAccess.csproj", "{3E06258F-AE28-476D-A8DE-17CDA8E1E3EB}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7388690B-B418-4DC0-9153-01E7D845D972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.BenchmarkApp", "ToDoList.BenchmarkApp\ToDoList.BenchmarkApp.csproj", "{A3D16C51-A134-415E-9353-EE5508DBE797}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.BenchmarkApp", "ToDoList.BenchmarkApp\ToDoList.BenchmarkApp.csproj", "{A3D16C51-A134-415E-9353-EE5508DBE797}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +25,6 @@ Global
 		{13BC9207-C859-4C4E-B89B-2839113E8B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BC9207-C859-4C4E-B89B-2839113E8B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BC9207-C859-4C4E-B89B-2839113E8B05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7911A766-D1F8-4AFD-BEB8-F887F8030D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7911A766-D1F8-4AFD-BEB8-F887F8030D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7911A766-D1F8-4AFD-BEB8-F887F8030D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7911A766-D1F8-4AFD-BEB8-F887F8030D89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E06258F-AE28-476D-A8DE-17CDA8E1E3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E06258F-AE28-476D-A8DE-17CDA8E1E3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E06258F-AE28-476D-A8DE-17CDA8E1E3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E06258F-AE28-476D-A8DE-17CDA8E1E3EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7388690B-B418-4DC0-9153-01E7D845D972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7388690B-B418-4DC0-9153-01E7D845D972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7388690B-B418-4DC0-9153-01E7D845D972}.Release|Any CPU.ActiveCfg = Release|Any CPU

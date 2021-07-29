@@ -8,8 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["ToDoList.Web.Grpc/ToDoList.Web.Grpc.csproj", "ToDoList.Web.Grpc/"]
-COPY ["ToDoList.DataAccess/ToDoList.DataAccess.csproj", "ToDoList.DataAccess/"]
-COPY ["ToDoList.Domain/ToDoList.Domain.csproj", "ToDoList.Domain/"]
 RUN dotnet restore "ToDoList.Web.Grpc/ToDoList.Web.Grpc.csproj"
 COPY . .
 WORKDIR "/src/ToDoList.Web.Grpc"

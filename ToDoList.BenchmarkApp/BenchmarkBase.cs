@@ -4,42 +4,39 @@ using System.Threading.Tasks;
 
 namespace ToDoList.BenchmarkApp
 {
-    public abstract class BenchmarkBase
-    {
-        private readonly int _todosCount;
+	public abstract class BenchmarkBase
+	{
+		private readonly int _todosCount;
 
-        public string Title { get; private set; }
+		public string Title { get; private set; }
 
-        protected BenchmarkBase(int todosCount, string title)
-        {
-            _todosCount = todosCount;
-            Title = title;
-        }
+		protected BenchmarkBase(int todosCount, string title)
+		{
+			_todosCount = todosCount;
+			Title = title;
+		}
 
-        protected abstract Task<bool> PingServiceAsync();
+		protected abstract Task<bool> PingServiceAsync();
 
-        protected abstract Task<bool> InsertTodosAsync(int todosCount);
+		protected abstract Task<bool> InsertTodosAsync(int todosCount);
 
-        protected abstract Task<IEnumerable<TodoEntry>> GetTodosAsync();
+		protected abstract Task GetTodosAsync();
 
-        protected abstract Task<bool> CompleteTodosAsync(IEnumerable<TodoEntry> todos);
+		public async Task<long> RunTestAsync()
+		{
+			var success = await PingServiceAsync();
 
-        public async Task<long> RunTestAsync()
-        {
-            var success = await PingServiceAsync();
+			if (!success)
+				return 0;
 
-            if (!success)
-                return 0;
+			var watch = Stopwatch.StartNew();
 
-            var watch = Stopwatch.StartNew();
+			await InsertTodosAsync(_todosCount);
+			await GetTodosAsync();
 
-            await InsertTodosAsync(_todosCount);
-            var todos = await GetTodosAsync();
-            await CompleteTodosAsync(todos);
+			watch.Stop();
 
-            watch.Stop();
-
-            return watch.ElapsedMilliseconds;
-        }
-    }
+			return watch.ElapsedMilliseconds;
+		}
+	}
 }
